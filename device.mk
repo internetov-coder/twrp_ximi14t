@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1
+    libopenaes
 
 # Keymint
 PRODUCT_PACKAGES += \
