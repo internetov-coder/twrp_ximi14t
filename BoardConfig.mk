@@ -1,5 +1,3 @@
-
-
 DEVICE_PATH := device/xiaomi/degas
 
 # For building with minimal manifest
@@ -54,7 +52,7 @@ TARGET_USES_UEFI := true
 # Kernel
 TARGET_NO_KERNEL := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_RAMDISK_USE_LZ4 := true
+BOARD_RAMDISK_USE_GZIP := true
 TARGET_KERNEL_ARCH := $(TARGET_ARCH)
 TARGET_KERNEL_HEADER_ARCH := $(TARGET_ARCH)
 BOARD_PAGE_SIZE := 4096
@@ -171,9 +169,14 @@ TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_NANO := false
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_TZDATA := true
-TW_EXCLUDE_BASH := true
+TW_EXCLUDE_BASH := false
 TW_EXCLUDE_LPTOOLS := true
 TW_EXCLUDE_LPDUMP := true
+
+# Additional excludes for size optimization
+TW_EXCLUDE_ENCRYPTED_BACKUPS := true
+TW_EXCLUDE_SUPERSU := true
+BOARD_VENDOR_RAMDISK_COMPRESSOR := gzip
 
 # Debug-tools
 #TWRP_INCLUDE_LOGCAT := true
@@ -196,7 +199,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 TW_LOAD_VENDOR_BOOT_MODULES := true
 
 # Maintainer/Version
-TW_DEVICE_VERSION := zenin1504/beta
+TW_DEVICE_VERSION := by @m5stick
 
 TW_LOAD_VENDOR_MODULES := "haptic.ko"
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
