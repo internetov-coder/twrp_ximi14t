@@ -15,6 +15,3 @@ system_dlkm /system_dlkm erofs ro wait,slotselect,avb,logical,first_stage_mount
 /dev/block/by-name/rescue /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 /dev/block/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 /dev/block/by-name/misc /misc emmc defaults defaults
-
-# SD-карта для бэкапов и хранения
-/dev/block/mmcblk1p1 /external_sd ext4 rw,wait,check,formattable
