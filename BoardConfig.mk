@@ -153,9 +153,9 @@ TARGET_USES_MKE2FS := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Include some binaries (disabled for space)
-TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_LIBRESETPROP := false
 TW_INCLUDE_REPACKTOOLS := false
-TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_RESETPROP := false
 
 # Set brightness path and level
 TW_DEFAULT_BRIGHTNESS := 400
@@ -165,7 +165,7 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 # Excludes
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_PYTHON := true
-TW_EXCLUDE_NANO := false
+TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_BASH := true
