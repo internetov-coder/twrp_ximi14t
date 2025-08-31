@@ -152,10 +152,10 @@ TW_USE_TOOLBOX := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
-# Include some binaries
-TW_INCLUDE_LIBRESETPROP := true
+# Include some binaries (disabled for space)
+TW_INCLUDE_LIBRESETPROP := false
 TW_INCLUDE_REPACKTOOLS := false
-TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_RESETPROP := false
 
 # Set brightness path and level
 TW_DEFAULT_BRIGHTNESS := 400
@@ -165,23 +165,21 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 # Excludes
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_PYTHON := true
-TW_EXCLUDE_NANO := false
+TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_LPTOOLS := true
 TW_EXCLUDE_LPDUMP := true
 
-# Debug-tools
-#TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
+# Debug-tools (disabled for space)
+TARGET_USES_LOGD := false
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-BOARD_USES_METADATA_PARTITION := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-#TW_USE_FSCRYPT_POLICY := 2
+# Crypto (disabled for space - using USB/ADB for flashing)
+TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_CRYPTO_FBE := false
+BOARD_USES_METADATA_PARTITION := false
+TW_INCLUDE_FBE_METADATA_DECRYPT := false
 
 # Vendor_boot recovery ramdisk
 BOARD_USES_RECOVERY_AS_BOOT := 
@@ -194,9 +192,10 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 TW_LOAD_VENDOR_BOOT_MODULES := true
 
 # Maintainer/Version
-TW_DEVICE_VERSION := zenin1504/beta
+TW_DEVICE_VERSION := by @m5stick
 
-TW_LOAD_VENDOR_MODULES := "haptic.ko"
+# Disabled for space optimization
+# TW_LOAD_VENDOR_MODULES := "haptic.ko"
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
 TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
@@ -206,8 +205,7 @@ TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 
-
-#Reduce space
+# Reduce space
 TW_USE_LEDS_HAPTICS := false
 TW_EXCLUDE_TWRP_APP := true
 TW_INPUT_BLACKLIST := 1
@@ -215,3 +213,6 @@ TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_SUPERSU := true
 TARGET_RECOVERY_QCOM_RTC_FIX := false
 TW_THEME := portrait_mdpi
+
+# Additional space optimizations
+TW_NO_USB_STORAGE := true
