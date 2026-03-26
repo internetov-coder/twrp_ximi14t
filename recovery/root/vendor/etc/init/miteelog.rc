@@ -1,0 +1,5 @@
+service miteelog /vendor/bin/miteelog
+	class none
+	user root
+	group root
+	seclabel u:r:recovery:s0
