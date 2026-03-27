@@ -127,6 +127,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# Fix security library dependency
+PRODUCT_PACKAGES += \
+    android.security.apc-ndk_platform
+
 # Crypto / KeyMint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V3-ndk \
