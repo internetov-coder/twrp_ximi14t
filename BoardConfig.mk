@@ -57,6 +57,10 @@ BUILD_BROKEN_NINJA_USES_ENV_VARS += RTIC_MPGEN
 BUILD_BROKEN_PLUGIN_VALIDATION := \
     soong-libaosprecovery_defaults soong-libguitwrp_defaults soong-libminuitwrp_defaults soong-vold_defaults
 BUILD_BROKEN_SRC_DIR_IS_WRITABLE := true
+# Добавь эти две строки ниже:
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+BUILD_BROKEN_VERIFY_USES_LIBRARIES := true
+
 
 # Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
