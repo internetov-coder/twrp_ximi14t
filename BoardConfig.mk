@@ -156,6 +156,7 @@ TARGET_INIT_VENDOR_LIB := libinit_degas
 TARGET_RECOVERY_DEVICE_MODULES := libinit_degas
 
 # TWRP Configurations
+TW_EXCLUDE_APFS := true
 TW_FRAMERATE := 120
 TW_STATUS_ICONS_ALIGN := center
 TW_THEME := portrait_hdpi
@@ -177,7 +178,7 @@ TW_NO_LEGACY_PROPS := true
 TW_NO_BIND_SYSTEM := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_DEVICE_VERSION := Xiaomi_14T
+TW_DEVICE_VERSION := v1-by-internetov
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 
